@@ -22,7 +22,7 @@ if [ $ret -ne 0 ] ; then
   echo "[!] testing fails."
   exit 1
 else
-  coverage=$(echo "$result" | grep 'all files' | awk -F '|' '{print $2}' | sed 's/ //g')
+  coverage=$(echo "$result" | sed 's/\x1b\[[0-9;]*m//g' | grep 'all files' | awk -F '|' '{print $2}' | sed 's/ //g')
   if (( $(echo "$coverage < 100" | bc -l) )); then
     echo "[!] Coverage is only $coverage%, should be 100%."
     exit 1
