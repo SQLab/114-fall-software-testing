@@ -8,6 +8,12 @@ for file in *; do
   fi
 done
 
+# check whether use the __asan_unpoison_memory_region function in antiasan.c
+grep -q "__asan_unpoison_memory_region" antiasan.c && {
+  echo "[!] __asan_unpoison_memory_region function found in antiasan.c."
+  exit 1
+}
+
 test_path="${BASH_SOURCE[0]}"
 solution_path="$(realpath .)"
 tmp_dir=$(mktemp -d -t lab5-XXXXXXXXXX)

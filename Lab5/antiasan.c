@@ -1,6 +1,5 @@
 #include <string.h>
 
-void antiasan(unsigned long addr)
-{
+void antiasan(unsigned long addr) {
 
 }
