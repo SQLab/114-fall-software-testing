@@ -2,7 +2,7 @@
 
 # Check for unwanted files
 for file in *; do
-  if [[ $file != "bss_overflow.c" && $file != "antiasan.c" && $file != "antiasan.h" && $file != "Makefile" && $file != "README.md" && $file != "validate.sh" && $file != "ans" ]]; then
+  if [[ $file != "bss_overflow.c" && $file != "antiasan.c" && $file != "antiasan.h" && $file != "Makefile" && $file != "README.md" && $file != "validate.sh" && $file != "ans" && $file != "classroom.yml" ]]; then
     echo "[!] Unwanted file detected: $file."
     exit 1
   fi

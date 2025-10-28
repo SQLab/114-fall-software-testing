@@ -19,7 +19,7 @@ jobs:
       run: |
         cd Lab5
         echo "========== Running tests with detailed logs =========="
-        make && make run
+        make run
         echo "======================================================"
         make clean
     - name: Testcase 0

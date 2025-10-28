@@ -1,6 +1,6 @@
 CC=gcc
 
-.PHONY: all
+.PHONY: all run clean
 all: bss_overflow_asan
 
 bss_overflow_asan: bss_overflow.c libantiasan.so
@@ -10,10 +10,8 @@ libantiasan.so: antiasan.c
 	$(CC) -g -fPIC -c antiasan.c
 	$(CC) -shared antiasan.o -o libantiasan.so
 
-.PHINY: run
-run:
+run: bss_overflow_asan
 	LD_LIBRARY_PATH=. ./bss_overflow_asan
 
-.PHONY: clean
 clean:
-	rm bss_overflow_asan antiasan.o libantiasan.so
+	rm -f bss_overflow_asan antiasan.o libantiasan.so
