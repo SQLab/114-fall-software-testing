@@ -9,7 +9,7 @@ In this lab, you will write a function to bypass the detection of ASan in `antia
 1. (100%) Write a function antoasan to bypass the detection of ASan in `antiasan.c`.
 You can run `validate.sh` in your local environment to test if you satisfy the requirements.
 
-Please note that you must not alter files other than `antiasan.c`. You will get 0 points if
+Please note that you must not alter files other than `antiasan.c`, `antiasan.h`. You will get 0 points if
 
 1. You modify other files to achieve the requirements.
 2. You can't pass all CI on your PR.
