@@ -1,13 +1,5 @@
 #!/bin/bash
 
-# Check for unwanted files
-for file in *; do
-  if [[ $file != "venv" && $file != "solve.py" && $file != "chal" && $file != "chal.c" && $file != "Makefile" && $file != "README.md" && $file != "validate.sh" && $file != "ans" && $file != "1.txt" && $file != "2.txt" ]]; then
-    echo "[!] Unwanted file detected: $file."
-    exit 1
-  fi
-done
-
 test_path="${BASH_SOURCE[0]}"
 solution_path="$(realpath .)"
 tmp_dir=$(mktemp -d -t lab6-XXXXXXXXXX)

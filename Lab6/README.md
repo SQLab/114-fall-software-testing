@@ -40,7 +40,7 @@ You will get 0 points if
 ## Submission
 
 You need to commit and push the following files to your repository:
-1. Your `solve.py` script.
+1. Your `solve.py` script (or any other scripts you use).
 2. The generated `1.txt` and `2.txt` files.
 3. Your final report, `{student_id}_solution.pdf`.
 
