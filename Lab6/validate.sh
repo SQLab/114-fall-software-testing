@@ -18,11 +18,9 @@ cd $tmp_dir
 rm -rf *
 cp $solution_path/Makefile .
 cp $solution_path/ans .
-cp $solution_path/*.c .
 cp $solution_path/chal .
 cp $solution_path/*.txt .
 
-make
 make run$1 > out
 result=$(diff --strip-trailing-cr ans out)
 if [[ -n $result ]]; then

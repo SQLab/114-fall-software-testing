@@ -5,10 +5,10 @@ all:
 
 run: run1 run2
 
-run1: all
+run1:
 	@cat 1.txt | ./chal
 
-run2: all
+run2:
 	@cat 2.txt | ./chal
 
 clean:
