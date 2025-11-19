@@ -2,7 +2,7 @@
 
 # Check for unwanted files
 for file in *; do
-  if [[ $file != "solve.py" && $file != "chal.c" && $file != "Makefile" && $file != "README.md" && $file != "validate.sh" && $file != "ans" ]]; then
+  if [[ $file != "venv" && $file != "solve.py" && $file != "chal" && $file != "chal.c" && $file != "Makefile" && $file != "README.md" && $file != "validate.sh" && $file != "ans" && $file != "1.txt" && $file != "2.txt" ]]; then
     echo "[!] Unwanted file detected: $file."
     exit 1
   fi
@@ -19,10 +19,11 @@ rm -rf *
 cp $solution_path/Makefile .
 cp $solution_path/ans .
 cp $solution_path/*.c .
-cp $solution_path/*.py .
+cp $solution_path/chal .
+cp $solution_path/*.txt .
 
 make
-make run > out
+make run$1 > out
 result=$(diff --strip-trailing-cr ans out)
 if [[ -n $result ]]; then
   echo "[!] Expected: "

@@ -1,7 +1,7 @@
 .PHONY: all run run1 run2 clean
 
 all:
-	gcc -o chal -no-pie chal.c
+	@gcc -o chal -no-pie -s chal.c
 
 run: run1 run2
 
