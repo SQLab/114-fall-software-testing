@@ -24,18 +24,20 @@ Your grade will be based on the following criteria:
 1.  **(55%) Correctness**:
     *   (20%) Your generated `1.txt` passes the check from `./validate.sh 1`.
     *   (35%) Your generated `2.txt` passes the check from `./validate.sh 2`.
-2.  **(15%)** You take use of **symbolic execution** to solve the problem.
+2.  **(15%)** You utilize symbolic execution to solve the problem.
 2.  **(30%) Solution Report**:
     *   You must submit a report named `{student_id}_solution.pdf` (e.g., `314551001_solution.pdf`).
     *   This report should clearly explain your methodology, the challenges you encountered, and how you solved them. If you used `angr`, describe the features you used.
-
+        *   Elapsed time your solution took to run.
+    
 ### Bonus
 
-1. **(10%)**: Your solution report is well-organized, easy to read, and includes clear code snippets with syntax highlighting.
-2. **(20%)**: You use **angr** to solve the problem within 10 minutes. DEMO REQUIRED.
+1. **(10%)** Your solution report is well-organized, easy to read, and includes clear code snippets with syntax highlighting.
+2. **(20%)** You use **angr** to solve the problem within 10 minutes. DEMO REQUIRED.
+3. If you find more than two answers, please contact the TA via email, and you will receive some bonus rewards.
 
 You will get 0 points if
-1. You modify any other files (`Makefile`, `validate.sh`, etc.) or patch the binary (`chal`) to simplify the challenge.
+1. You modify any other files (e.g., Makefile, validate.sh) or patch the binary (`chal`) to simplify the challenge.
 2. You can't pass all CI on your PR.
 
 ## Submission
