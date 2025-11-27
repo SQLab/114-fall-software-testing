@@ -24,11 +24,12 @@ Your grade will be based on the following criteria:
 1.  **(55%) Correctness**:
     *   (20%) Your generated `1.txt` passes the check from `./validate.sh 1`.
     *   (35%) Your generated `2.txt` passes the check from `./validate.sh 2`.
-2.  **(15%)** You utilize symbolic execution to solve the problem.
+2.  **(15%)** You utilize angr to solve the problem.
 2.  **(30%) Solution Report**:
     *   You must submit a report named `{student_id}_solution.pdf` (e.g., `314551001_solution.pdf`).
     *   This report should clearly explain your methodology, the challenges you encountered, and how you solved them. If you used `angr`, describe the features you used.
         *   Elapsed time your solution took to run.
+        *   If you submit 1.txt or 2.txt, this report is required to be submitted, or you will get 0 points for the entire Lab 6.
     
 ### Bonus
 

@@ -1,6 +1,10 @@
 # 114-fall-software-testing
 Labs for NYCU software testing course in 114 fall
 
+## Lab 6
+
+See [README.md](Lab6/README.md)
+
 ## Lab 5
 
 See [README.md](Lab5/README.md)
