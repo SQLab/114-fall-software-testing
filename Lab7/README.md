@@ -2,25 +2,25 @@
 
 ## Introduction
 
-In this lab, you will write a llvm pass in `llvm-pass/afl-demo-pass.so.cc` and `llvm-pass/afl-demo-rt.o.c`, and enable AFL++ to detect command injection vulnerabilities.
+In this lab, you will write a LLVM pass in `llvm-pass/afl-demo-pass.so.cc` and `llvm-pass/afl-demo-rt.o.c`, and enable AFL++ to detect command injection vulnerabilities.
 
-## Environment (Important!!!)
+## Environment (Important.)
 
 1. x86_64 machine
-2. ubuntu 22.04 / 24.04
+2. Ubuntu 24.04
 3. llvm-14
 
 ## Requirement
 
-**(100%)** In this lab, you will write a llvm pass in `llvm-pass/afl-demo-pass.so.cc` & `llvm-pass/afl-demo-rt.o.c` and satisfy following requirements.
-1. When running afl++ to fuzz `program`, `program` can't crash by `system("echo AAA");` at line 34 in `program.c`. It's not command injection and you will see below error message when you try to fuzz:
+**(100%)** In this lab, you will write a LLVM pass in `llvm-pass/afl-demo-pass.so.cc` & `llvm-pass/afl-demo-rt.o.c` and satisfy the following requirements.
+1. When running afl++ to fuzz `program`, `program` can't crash by `system("echo AAA");` at line 34 in `program.c`. It's not command injection, and you will see the error message below when you try to fuzz:
     ```
     [-] PROGRAM ABORT : We need at least one valid input seed that does not crash!
     ```
-    Of course, you can not just detect this line to avoid it. We will change this command and add more system functions (which won't cause command injection) in `program.c` when testing your fuzzer.
-2. When running afl++ to fuzz `program`, fuzzer need to find the command injection `system(cmd);` at line 18 in `program.c`.
+    Of course, you can not just detect this line to avoid it. We will modify this command and add additional system functions (which won't cause command injection) in `program.c` during testing with your fuzzer.
+2. When running afl++ to fuzz `program`, the fuzzer needs to find the command injection `system(cmd)` at line 18 in `program.c`.
 3. Write a report in `report.md` to explain your work
-4. Fill Name and ID, and copy crash fuzzer report and crash input (use `xxd`) in `report.md`.
+4. Fill Name and ID, and copy the crash fuzzer report and crash input (use `xxd`) in `report.md`.
     e.g.
     Crash Fuzzer Report:
     ```
@@ -58,5 +58,6 @@ In this lab, you will write a llvm pass in `llvm-pass/afl-demo-pass.so.cc` and `
 
 ## Submission
 
-1. Write a report in `report.md` to explain your work
-2. You need to commit and push the corresponding changes to your repository, which contains the code that satisfies the aforementioned requirements.
+1. Write a report in `report.md` to explain your work.
+2. You must submit these two files `llvm-pass/afl-demo-pass.so.cc` and `llvm-pass/afl-demo-rt.o.c`.
+3. You need to commit and push the corresponding changes to your repository, which contains the code that satisfies the aforementioned requirements.

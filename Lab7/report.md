@@ -1,7 +1,7 @@
 Name:
 Student ID:
 
-## Explaination of your work
+## Explanation of your work
 
 
 ### Crash Fuzzer Report
