@@ -7,7 +7,7 @@ In this lab, you will write a LLVM pass in `llvm-pass/afl-demo-pass.so.cc` and `
 ## Environment (Important.)
 
 1. x86_64 machine
-2. Ubuntu 24.04
+2. Ubuntu 22.04
 3. llvm-14
 
 ## Requirement
@@ -19,10 +19,22 @@ In this lab, you will write a LLVM pass in `llvm-pass/afl-demo-pass.so.cc` and `
     ```
     Of course, you can not just detect this line to avoid it. We will modify this command and add additional system functions (which won't cause command injection) in `program.c` during testing with your fuzzer.
 2. When running afl++ to fuzz `program`, the fuzzer needs to find the command injection `system(cmd)` at line 18 in `program.c`.
-3. Write a report in `report.md` to explain your work
-4. Fill Name and ID, and copy the crash fuzzer report and crash input (use `xxd`) in `report.md`.
-    e.g.
-    Crash Fuzzer Report:
+3. Write a report in `{student_ID}.pdf` to explain your work.
+    - Your report must include the following sections
+        - Your name and student ID,
+        - Explanation of your work
+        - Copy the crash fuzzer report and crash input (use `xxd`) in `{student_ID}.pdf`.
+
+**Template**
+
+    Name:
+    student_ID:
+
+    ```
+    Explanation of your work
+    ```
+
+    Crash fuzzer report
     ```
 
                 american fuzzy lop ++4.01c {default} (./program) [fast]
@@ -49,6 +61,7 @@ In this lab, you will write a LLVM pass in `llvm-pass/afl-demo-pass.so.cc` and `
     │py/custom/rq : unused, unused, unused, unused       ├───────────────────────┘
     │    trim/eff : 0.00%/7, disabled                    │          [cpu000: 12%]
     └────────────────────────────────────────────────────┘
+
     ```
     Crash Input:
     ```
@@ -58,6 +71,7 @@ In this lab, you will write a LLVM pass in `llvm-pass/afl-demo-pass.so.cc` and `
 
 ## Submission
 
-1. Write a report in `report.md` to explain your work.
-2. You must submit these two files `llvm-pass/afl-demo-pass.so.cc` and `llvm-pass/afl-demo-rt.o.c`.
-3. You need to commit and push the corresponding changes to your repository, which contains the code that satisfies the aforementioned requirements.
+1. Lab7 will not have github ci, so the grade of Lab7 will be determined with your report `{studemt_ID}.pdf`
+2. Write a report in `{student_ID}.pdf` to explain your work.
+3. You must submit these two files `llvm-pass/afl-demo-pass.so.cc` and `llvm-pass/afl-demo-rt.o.c`.
+4. You need to commit and push the corresponding changes to your repository, which contains the code that satisfies the aforementioned requirements.
