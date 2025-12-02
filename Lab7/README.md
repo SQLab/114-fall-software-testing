@@ -13,14 +13,14 @@ In this lab, you will write a LLVM pass in `llvm-pass/afl-demo-pass.so.cc` and `
 ## Requirement
 
 **(100%)** In this lab, you will write a LLVM pass in `llvm-pass/afl-demo-pass.so.cc` & `llvm-pass/afl-demo-rt.o.c` and satisfy the following requirements.
-1. When running afl++ to fuzz `program`, `program` can't crash by `system("echo AAA");` at line 34 in `program.c`. It's not command injection, and you will see the error message below when you try to fuzz:
+1. When running afl++ to fuzz the `program`, the `program` can't crash by `system("echo AAA");` at line 34 in `program.c`. It's not command injection, and you will see the error message below when you try to fuzz:
     ```
     [-] PROGRAM ABORT : We need at least one valid input seed that does not crash!
     ```
     Of course, you can not just detect this line to avoid it. We will modify this command and add additional system functions (which won't cause command injection) in `program.c` during testing with your fuzzer.
-2. When running afl++ to fuzz `program`, the fuzzer needs to find the command injection `system(cmd)` at line 18 in `program.c`.
+2. When running afl++ to fuzz the `program`, the fuzzer needs to find the command injection `system(cmd)` at line 18 in `program.c`.
 3. Write a report in `{student_ID}.pdf` to explain your work.
-    - Your report must include the following sections
+    - Your report must include the following sections.
         - Your name and student ID,
         - Explanation of your work
         - Copy the crash fuzzer report and crash input (use `xxd`) in `{student_ID}.pdf`.
@@ -71,7 +71,7 @@ In this lab, you will write a LLVM pass in `llvm-pass/afl-demo-pass.so.cc` and `
 
 ## Submission
 
-1. Lab7 will not have github ci, so the grade of Lab7 will be determined with your report `{studemt_ID}.pdf`
+1. Lab7 will not have GitHub CI, so the grade of Lab7 will be determined with your report `{student_ID}.pdf`
 2. Submit the report `{student_ID}.pdf` to explain your work.
 3. You must submit these two files `llvm-pass/afl-demo-pass.so.cc` and `llvm-pass/afl-demo-rt.o.c`.
 4. You need to commit and push the corresponding changes to your repository, which contains the code that satisfies the aforementioned requirements.
