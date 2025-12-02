@@ -72,6 +72,6 @@ In this lab, you will write a LLVM pass in `llvm-pass/afl-demo-pass.so.cc` and `
 ## Submission
 
 1. Lab7 will not have github ci, so the grade of Lab7 will be determined with your report `{studemt_ID}.pdf`
-2. Write a report in `{student_ID}.pdf` to explain your work.
+2. Submit the report `{student_ID}.pdf` to explain your work.
 3. You must submit these two files `llvm-pass/afl-demo-pass.so.cc` and `llvm-pass/afl-demo-rt.o.c`.
 4. You need to commit and push the corresponding changes to your repository, which contains the code that satisfies the aforementioned requirements.
